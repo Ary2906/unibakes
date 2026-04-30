@@ -1,21 +1,16 @@
 import './App.css'
-import Header from './components/Header'
-import HeroSection from './components/HeroSection'
-import CuratedWorlds from './components/CuratedWorlds'
-import OrderSection from './components/OrderSection'
-import Community from './components/Community'
-import Footer from './components/Footer'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import HomePage from './components/HomePage'
+import ContactPage from './components/ContactPage'
 
 function App() {
   return (
-    <>
-      <Header />
-      <HeroSection />
-      <CuratedWorlds />
-      <OrderSection />
-      <Community />
-      <Footer />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+    </Router>
   )
 }
 
